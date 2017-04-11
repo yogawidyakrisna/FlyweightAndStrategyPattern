@@ -45,8 +45,8 @@ struct CoffeeShop {
 	private var orders = [Int: CoffeeFlavor]()
 	private var menu = Menu()
 	
-	mutating func takeOrder(flavor flavor: String, table: Int) {
-		orders[table] = menu.lookup(flavor)
+	mutating func takeOrder(flavor: String, table: Int) {
+		orders[table] = menu.lookup(flavor: flavor)
 	}
 	
 	func serve() {
