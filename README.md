@@ -14,37 +14,37 @@ import Foundation
 
 // Instances of CoffeeFlavour will be the Flyweights
 struct CoffeeFlavor : CustomStringConvertible {
-    var flavor: String
-    var description: String { return flavor }
+	var flavor: String
+	var description: String { return flavor }
 }
 
 // Menu acts as a factory and cache for CoffeeFlavour flyweight objects
 struct Menu {
-    private var flavors = [String: CoffeeFlavor]()
-
-    mutating func lookup(flavor: String) -> CoffeeFlavor {
-        if let f = flavors[flavor] { return f }
-        else {
-            let cFlavor = CoffeeFlavor(flavor: flavor)
-            flavors[flavor] = cFlavor
-            return cFlavor
-        }
-    }
+	private var flavors = [String: CoffeeFlavor]()
+	
+	mutating func lookup(flavor: String) -> CoffeeFlavor {
+		if let coffeeFlavor = flavors[flavor] { return coffeeFlavor }
+		else {
+			let newFlavor = CoffeeFlavor(flavor: flavor)
+			flavors[flavor] = newFlavor
+			return newFlavor
+		}
+	}
 }
 
 struct CoffeeShop {
-    private var orders = [Int: CoffeeFlavor]()
-    private var menu = Menu()
-
-    mutating func takeOrder(flavor flavor: String, table: Int) {
-        orders[table] = menu.lookup(flavor)
-    }
-
-    func serve() {
-        for (table, flavor) in orders {
-            print("Serving \(flavor) to table \(table)")
-        }
-    }
+	private var orders = [Int: CoffeeFlavor]()
+	private var menu = Menu()
+	
+	mutating func takeOrder(flavor flavor: String, table: Int) {
+		orders[table] = menu.lookup(flavor)
+	}
+	
+	func serve() {
+		for (table, flavor) in orders {
+			print("Serving \(flavor) to table \(table)")
+		}
+	}
 }
 
 var coffeeShop = CoffeeShop()
