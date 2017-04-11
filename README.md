@@ -1,6 +1,5 @@
 # Flyweight Pattern
-#
-#
+
 The flyweight pattern is typically used for efficiency reasons, in the flyweight pattern, objects are recycled rather than allocated and initialized from scratch.
 ### When to use?
   - An application uses a large number of same objects.
@@ -67,8 +66,6 @@ coffeeShop.serve()
 
 
 # Strategy Pattern
-#
-#
 Strategy pattern allows you to move behavior into separate class which is good for single responsibility
 
 #### Example
