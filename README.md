@@ -1,5 +1,14 @@
 # Flyweight Pattern
-The flyweight pattern is typically used for efficiency reasons, in the flyweight pattern, objects are recycled rather than allocated and initialized from scratch.
+The flyweight pattern is typically used for efficiency reasons, in the flyweight pattern, objects are recycled rather than allocated and initialized from scratch. The key concept here is the distinction between Intrinsic and Extrinsic state
+
+## Intrinsic
+- Shareable object
+- Independent
+
+## Extrinsic
+- Can't be shared
+- Other information for intrinsic
+
 ### When to use?
   - An application uses a large number of same objects.
   - Storage costs are high because of the sheer quantity of objects.
