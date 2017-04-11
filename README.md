@@ -114,3 +114,11 @@ lower.print("O tempora, o mores!")
 var upper = Printer(strategy: UpperCaseStrategy())
 upper.print("O tempora, o mores!")
 ```
+
+Source : 
+
+https://en.wikipedia.org/wiki/Flyweight_pattern
+
+https://github.com/ochococo/Design-Patterns-In-Swift
+
+Addison Wesley - Design Patterns Elements of Reusable Object Oriented Software
