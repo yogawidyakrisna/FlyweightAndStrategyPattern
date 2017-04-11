@@ -47,7 +47,7 @@ struct CoffeeShop {
     }
 }
 
-let coffeeShop = CoffeeShop()
+var coffeeShop = CoffeeShop()
 coffeeShop.takeOrder(flavor: "Cappuccino", table: 1)
 coffeeShop.takeOrder(flavor: "Frappe", table: 3);
 coffeeShop.takeOrder(flavor: "Espresso", table: 2);
