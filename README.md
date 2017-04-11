@@ -1,5 +1,4 @@
 # Flyweight Pattern
-
 The flyweight pattern is typically used for efficiency reasons, in the flyweight pattern, objects are recycled rather than allocated and initialized from scratch.
 ### When to use?
   - An application uses a large number of same objects.
@@ -66,7 +65,15 @@ coffeeShop.serve()
 
 
 # Strategy Pattern
+
 Strategy pattern allows you to move behavior into separate class which is good for single responsibility
+
+### When to use?
+  - If we need different algorithms behavior to be selected at runtime
+
+### When NOT to use?
+  - If the change is total unknown and unforeseeable yet. At that point Strategy Pattern be not appropriate to be added. 
+  - The proper time to introduce a Strategy pattern is exactly the first time it's needed -- otherwise, YAGNI applies
 
 #### Example
 ```swift
